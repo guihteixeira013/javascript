@@ -26,17 +26,11 @@
     <!-- ALWAYS START JS HERE in <body>-->
 
     <script>
-        /*
-            To COMMIT in JS use:
-            //  to unique line commit
-                    OR
-            /* 
-                to multiple lines
-            /
-        */
-        window.alert('My first message')
-        window.confirm('Are you enjoying JS?')
-        window.prompt('Whats your name?')
+        var n1 = Number(window.prompt('Number 1: ')) //recebe string CONVERTIDA em inteiro
+        var n2 = Number(window.prompt('Number 2: ')) //recebe string CONVERTIDA em inteiro
+        var sum = n1 + n2
+        window.alert(`${n1} + ${n2} = ${sum}`)
+
     </script>
 
     <!-- ALWAYS END HERE before </body>-->
