@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First steps with DOM</title>
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.900);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">Starting studies with DOM</h1>
+    <p>Here goes the results</p>
+    <p>Learning to use <strong>DOM</strong> in JavaScript.</p>
+    <div id="msg">click me</div>    
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.color = 'gray'
+        window.document.write(`It's written like this: ${p1.innerHTML}`)
+        
+        var b1 = document.getElementById('msg')
+        window.document.writeln(b1.innerHTML) // Showing element with all formatting (strong, emphasis, color etc...)
+        b1.style.background = 'rgba(0, 0, 0, 0.900)' // setting b1 background
+
+        window.document.getElementById('msg').innerText = 'Loading ...' // Transforming text
+        // OR just b1.innerText = 'Loading ...'
+
+        var emp = window.document.querySelector('h1#tit')
+        emp.style.background = 'black'
+    </script>
+</body>
+</html>
