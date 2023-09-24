@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Calibri;
+            font-size: 14px;
+        }
+        
+        table {
+            border: solid 1px black;
+            border-radius: 2px;
+        }
+
+        table th{
+            background-color: gray;
+            border: solid 1px black;
+            color: white;
+            /* width: 100%; */
+        }
+
+
+        table td{
+            padding: 5px 20px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabela</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>DIAMOND</th>
+                <th>RUBIES</th>
+            </tr>
+        </thead>
+        <tbody class="tableBody">
+        </tbody>
+    </table>
+
+    <script> 
+        const tableBody = document.querySelector(".tableBody");
+
+        // COLOQUE A ARRAY COM OS VALORES AQUI
+        const values = // INSERT VALUE HERE //
+
+        for (let i = 0; i < values.length; i += 2) {
+            const newRow = document.createElement("tr");
+            const diamondValue = values[i];
+            const rubiesValue = values[i + 1];
+
+            const diamondCell = document.createElement("td");
+            diamondCell.textContent = diamondValue;
+            newRow.appendChild(diamondCell);
+
+            const rubiesCell = document.createElement("td");
+            rubiesCell.textContent = rubiesValue;
+            newRow.appendChild(rubiesCell);
+
+            tableBody.appendChild(newRow);
+        }
+
+    </script>
+</body>
+</html>

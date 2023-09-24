@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Age Checker</h1>
+    </header>
+    <main>
+        <section id="form">
+                    <!-- BIRTH DATE-->
+            <label for="age">Birth Date: </label>
+            <input type="number" name="age" id="age" size="10" min="1920" max="2023"><br>
+       
+            Gender: <!-- MALE -->
+            <label for="male">Male </label>
+            <input type="radio" name="gender" id="male" value="male">
+                    <!-- FEMALE-->
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female" checked><br>
+                    <!-- BUTTON-->
+            <input type="submit" value="Check" id="sub" onclick="toCheck()">  
+        </section>
+        <div id="msg">
+            Fill out the form above to see the result!
+        </div> 
+    </main>
+    <footer>
+        <p>&copy; Copyright All Rights Reserved by <a href="https://github.com/guihteixeira013" target="_blank" alt="Author Github">Guilherme Teixeira</a>.</p>
+    </footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

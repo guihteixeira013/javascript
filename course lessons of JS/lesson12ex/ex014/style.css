@@ -1,0 +1,57 @@
+/*
+PALLETE OF COLORS
+Sunrise =   #F26241
+Day =       #6394BF
+Sunset =    #61788C
+Night =     #0D0B40
+*/
+
+@charset "UTF-8";
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: aliceblue;
+    width: 500px;
+    padding: 10px;
+    border: 0px solid blue;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.226);
+    border-radius: 10px;
+}
+
+div#msg {
+    padding-top: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+div#img {
+    padding: 15px;
+}
+
+footer > p {
+    color: white;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+    padding: 5px;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}

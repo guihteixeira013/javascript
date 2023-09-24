@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS collecting data from excel</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.min.js"></script>
+</head>
+<body>
+    <h1>Im testing</h1>
+    
+    <script>
+
+        import * as xlsx from 'xlsx';
+
+        const spreadsheet = xlsx.open('sheet.xlsx');
+        const data = spreadsheet.Sheets[0].values;
+
+        console.log(data);
+    </script>
+</body>
+</html>

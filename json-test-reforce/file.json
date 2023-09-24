@@ -1,0 +1,15 @@
+{
+    "name":"guilherme",
+    "age":28,
+    "gender":"male",
+    "is_working":false,
+    "is_studying":true,
+    "marital_status":["married",{
+        "name":"pamela",
+        "age":23,
+        "gender":"female",
+        "is_working":false,
+        "is_studying":true
+    }],
+    "hobbies":["gaming","book"]
+}

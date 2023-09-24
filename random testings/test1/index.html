@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Calculate</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        #money {
+            font-size: 3em;
+            animation: money .9s infinite alternate-reverse 
+        }
+
+        @keyframes money {
+            from {transform: scale(.32);
+            opacity: 1;}
+            to {transform: scale(1);
+            opacity: 0}
+        }
+    </style>
+</head>
+<body>
+    <h1>Getting your tax</h1>
+    <label for="txtprod">Product value: R$</label>
+    <input type="number" name="txtprod" id="txtprod">
+    <br>
+    <label for="txttax">Your tax: %</label>
+    <input type="number" name="txttax" id="txttax">
+    <br>
+    <input type="button" value="calculate" onclick="check()">
+
+    <div id="res"></div>
+    <div id="money">🪙</div>
+
+    <script>
+        function check() {
+            var tax = document.querySelector('input#txttax')
+            var prod = document.querySelector('input#txtprod')
+            var res = document.querySelector('div#res')
+            var calc = (Number(prod.value) * Number(tax.value)) / 100
+
+            res.innerHTML = `${Number(tax.value)}% of R$${Number(prod.value)} is <strong>R$${calc}</strong> 🪙`
+        }
+
+    </script>
+</body>
+</html>

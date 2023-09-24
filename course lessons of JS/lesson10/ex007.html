@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding numbers</title>
+    <style>
+        body {
+            font: normal 18pt  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body > h1 {
+            text-align: center;
+        }
+
+        body > input {
+            font: normal 18pt arial;
+            width: 150px;
+        }
+
+        body > input#butt {
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        div#res {
+            background-color: lightgray;
+            font-size: 0.8em;
+            text-align: center;
+            line-height: 2.3em;
+            margin-left: -10px;
+            margin-top: 10px;
+            width: 100vw;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adding values</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" id="butt" value="ADD" onclick="add()">
+    <div id="res">
+        Resultado: 
+    </div>
+    <script>
+        function add() {
+            var res = window.document.querySelector('#res')
+            var tn1 = window.document.querySelector('input#txtn1') 
+            var tn2 = window.document.querySelector('input#txtn2')
+            // changing types from 'STRING' to 'NUMBER'
+            var n1 = Number(tn1.value)  
+            var n2 = Number(tn2.value)
+            // Adding
+            var total = n1 + n2
+            // Showing the result
+            res.innerHTML = `The result between ${n1} and ${n2} its <strong>${total}</strong>`
+        }
+        
+    </script>
+</body>
+</html>

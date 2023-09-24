@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+    background-color: lightblue;
+}
+
+#btn {
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+

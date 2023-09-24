@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <style>
+        body {
+            background-color: rgb(49, 49, 49);
+            color: white;
+            font-family:'Segoe UI';
+        }
+
+        header {background-color: rgb(119, 119, 119);}
+        nav {background-color: rgb(100, 100, 100);}
+        section {background-color: rgb(79, 79, 79);}
+        footer {background-color: rgb(33, 33, 33);}
+
+        .wrapper-grid>* {
+            display: grid;
+
+            /* justify contents */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper-grid {
+            display: grid;
+            grid-template-columns: 100px repeat(2, 1fr);
+            grid-template-rows: 200px 400px 200px;
+
+            gap: 3px;
+        }
+
+        header {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+
+            font-size: 3em;
+        }
+
+        nav {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+
+            display: grid
+            align-content: center;
+        }
+
+        footer {
+            grid-row: 3 / -1;
+            grid-column: 1 / -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper-grid">
+        <header>Exemple !</header>
+        <nav>
+            <button>link 1</button>
+            <button>link 2</button>
+            <button>link 3</button>
+        </nav>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, consequuntur veniam nisi ipsam necessitatibus aliquam, corporis odit eius animi hic itaque earum, alias eos minima sapiente deserunt. Nihil, reprehenderit veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, reprehenderit eius, inventore, est dicta odit perspiciatis ut magnam temporibus maiores deleniti porro fugit quasi molestias ducimus sed quisquam aliquam ipsam.</p>
+        </section>
+        <section>
+            <article>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, dolores. Quis praesentium fugit quisquam beatae iusto sed magni neque, vitae, nam quas possimus? Dignissimos assumenda, repellat temporibus eum accusantium mollitia.</article>
+        </section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

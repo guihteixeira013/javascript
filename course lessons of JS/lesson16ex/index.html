@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Number Analyzer</header>
+    <section id="main">
+        <div>
+            <p>
+                Number (between 1 and 100):<input type="number" name="txtnum" id="txtnum" min="1" max="100"> 
+                <input class="btn" id="btn-add" type="submit" value="Add" onclick="add()">
+            </p>
+        </div>
+        <div>
+            <select name="tab" id="tab" size="10">
+            </select>
+            <p>
+                <button class="btn" id="btn-con" onclick="finish()">
+                    Conclude
+                </button>
+            </p>
+            <div id="res"></div>
+        </div>
+    </section>
+    <footer>© Guilherme Teixeira</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

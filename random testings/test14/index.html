@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="recognition-image-input">Choose image</label>
+  <input type="file" accept="image/jpeg, image/png" id="recognition-image-input" /><br />
+  <label for="recognition-confidence-input">Confidence</label>
+  <input type="number" max="100" min="0" id="recognition-confidence-input" value="70" /><br />
+  <label for="recognition-progress">File recognition progress:</label>
+  <progress id="recognition-progress" max="100" value="0">0%</progress>
+  <div id="recognition-text"></div>
+  <div id="recognition-images">
+    <div id="original-image"></div>
+    <div id="labeled-image"></div>
+  </div>
+
+  <script>
+
+    // references to the html elements
+
+    const recognitionImageInputElement = document.querySelector(
+    '#recognition-image-input',
+    );
+    const recognitionConfidenceInputElement = document.querySelector(
+    '#recognition-confidence-input',
+    );
+    const recognitionProgressElement = document.querySelector('#recognition-progress');
+    const recognitionTextElement = document.querySelector('#recognition-text');
+    const originalImageElement = document.querySelector('#original-image');
+    const labeledImageElement = document.querySelector('#labeled-image');
+
+    // listening on the change event
+
+    recognitionImageElement.addEventListener('change', () => {
+    if (!recognitionImageElement.files) {return null;}
+    const file = recognitionImageElement.files[0];
+    })
+
+    // recognizing an image
+
+    return tesseract
+    .recognize(file, {
+      lang: 'eng',
+    })
+    .progress(({ progress, status }) => {
+      if (!progress || !status || status !== 'recognizing text') {
+        return null;
+      }
+      const p = (progress * 100).toFixed(2);
+      recognitionProgressElement.textContent = `${status}: ${p}%`;
+      recognitionProgressElement.value = p;
+    })
+
+
+  </script>
+</body>
+</html>
+
+
