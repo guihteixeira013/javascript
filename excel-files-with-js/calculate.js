@@ -32,3 +32,5 @@ console.log(arrPlayers)
 //         inputFields.value = arrPlayers[index - 3].trophies;
 //     }
 // })
+
+// test
