@@ -1,9 +1,23 @@
 
-const object = new Object();
-object.firstName = "Guilherme";
-object.lastName = "Teixeira";
+let school = { 
+    name : "Vivekanada School", 
+    location : "Delhi", 
+    established : 1995, 
+    displayinfo : function() { 
+        document.write(`${school.name} was established  
+          in ${school.established} at ${school.location}`); 
+    } 
+} 
+  
+let hospital = {
+    name : "Ana Costa",
+    location : "Av. Ana Costa",
+    established : 1980,
+}
 
-// you can use "objName." or "this." to indicate 
-object.fullName = function() {return object.firstName + " " + this.lastName}
+//  estou aplicando .assign() neste caso ...
 
-console.log(object.fullName());
+let assigned = Object.assign(school, hospital);
+console.log(assigned);
+console.log(assigned === school);
+console.log(school);
