@@ -1,15 +1,10 @@
-// TYPE CASTING (fundição de tipo)
+// NUMBER CONVERSION
 
-// // BOOLEAN to STRING
-// let value = true;
-// console.log(typeof(value));
-//     // the casting moment:
-// value = String(value);
-// console.log(typeof(value));
+// automaticaly converts STRING to NUMBER
+console.log('10' / '5');
 
-// STRING to BOOLEAN
-let value = "true";
-console.log(typeof(value));
-    // the casting moment:
-value = Boolean(value);
-console.log(typeof(value));
+// in this case the "+" will concate both strings
+console.log('10' + '5');
+
+// but in this case that use "-" is the Implicit Conversion
+console.log('10' - '5');
