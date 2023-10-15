@@ -1,9 +1,20 @@
-const person = new Object();
-person.name = "guilherme";
+// MAP OBJECT
+const exemple = new Map();
+exemple.set('a', 1);
+exemple.set('b', 2);
+exemple.set('c', 3);
 
-let x = person;
-person.age = 78;
-console.log(x);
+// accessing MAP object
+// console.log(exemple.get('c'));
 
-// in this exemple 
-// PERSON and X are the same
+// changing MAP data
+// exemple.set('a', 44);
+// console.log(exemple.get('a'));
+
+// getting the size MAP
+// console.log(exemple.size);
+
+// deleting MAP data
+// exemple.delete('b');
+// console.log(exemple.get('b'))
+
